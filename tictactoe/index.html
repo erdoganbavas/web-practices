@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+
+    <style>
+        body, html {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            color: #d64343;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wrapper {
+            display: inline-block;
+            width: 300px;
+            margin: 25px auto;
+            background-color: #ccafaf;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .cell {
+            width: 90px;
+            height: 90px;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: #e7dada;
+            float: left;
+            cursor: pointer;
+            text-align: center;
+            line-height: 90px;
+            font-size: 40px;
+            color: #dedede;
+        }
+
+        #info {
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            float: left;
+            padding: 15px 0;
+        }
+
+        .cell.O {background-color: #d8345f;}
+        .cell.O:after {content: 'O';}
+
+        .cell.X {background-color: #588da8;}
+        .cell.X:after {content: 'X';}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div id="info"></div>
+    </div>
+    <script src="tictactoe.js"></script>
+</body>
+</html>
