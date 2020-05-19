@@ -9,7 +9,6 @@ const tictactoe = (function(){
     infoElement.innerText = turn + '\'s TURN';
 
     for (let index = 0; index < cellElements.length; index++) {
-        const cell = cellElements[index];
         cellElements[index].addEventListener('click', evt => cellClick(evt, index));
     
         cells[index] = {
