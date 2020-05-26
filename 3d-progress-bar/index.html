@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bar-wrapper">
+        <div class="bar">
+            <div class="face top">
+                <div class="state"></div>
+            </div>
+            <div class="face back">
+                <div class="state"></div>
+            </div>
+            <div class="face floor">
+                <div class="state"></div>
+            </div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face front">
+                <div class="state"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.body.onload = function(){
+            let w = 0;
+
+            const intervl = setInterval(function () {
+                const states = document.body.getElementsByClassName("state");
+                for(let i=0; i<states.length; i++) {
+                    states[i].style.width = w + "%";
+                }
+
+                w++;
+
+                if(w > 100) {
+                    clearInterval(intervl);
+                }
+            }, 50);
+        }
+    </script>
+</body>
+</html>
