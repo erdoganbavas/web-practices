@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explosive Button</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+        }
+
+        button {
+            background-color: darkblue;
+            border-radius: 5px;
+            font-size: 20px;
+            color: #ffffff;
+            margin: auto;
+            padding: 12px 20px;
+            border: 0;
+        }
+
+        button:focus,
+        button:hover {
+            background-color: darkblue;
+            outline: transparent;
+        }
+
+        .exploding,
+        .exploding:focus,
+        .exploding:hover {
+            background-color: transparent;
+            color: transparent;
+            pointer-events: none;
+            position: relative;
+            will-change: transform;
+        }
+
+        .particle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <button type="button">Explode</button>
+    <script src="button.js"></script>
+</body>
+</html>
