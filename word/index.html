@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Transition</title>
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .word {
+            position: absolute;
+            text-transform: uppercase;
+            opacity: 1;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            height: fit-content;
+            width: fit-content;
+            font-size: 70px;
+        }
+        .color1 {
+            color: blueviolet;
+        }
+        .color2{
+            color: crimson;
+        }
+        .color3{
+            color: darkcyan;
+        }
+
+        .letter {
+            display: inline-block;
+            position: relative;
+            float: left;
+            transform-origin: 50% 50%;
+        }
+
+        .in {
+            transform: rotateX(0deg);
+            transition: transform .4s ease-in;
+        }
+        .out {
+            transform: rotateX(90deg);
+            transition: transform .35s ease-out;
+        }
+        .behind {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="word color1">Madrid</span>
+        <span class="word color2">Paris</span>
+        <span class="word color3">London</span>
+    </div>
+
+    <script>
+        const words = document.getElementsByClassName("word");
+        const wordArray = [];
+        let currentWordIndex = 0;
+
+        // fill wordArray
+        for(let i=0; i<words.length; i++) {
+            splitLetter(words[i], i);
+        }
+
+        function changeWord(){
+            const cw = wordArray[currentWordIndex]; // current word
+            const nw = wordArray[ (currentWordIndex + 1) % words.length ]; // next word
+
+            // hide current words letters
+            cw.map((letter, i) => animateLetterOut(letter, i));
+
+            // show next words letters
+            nw.map((letter, i) => animateLetterIn(letter, i));
+
+            // change current word index
+            currentWordIndex = (currentWordIndex === wordArray.length-1) ? 0 : currentWordIndex + 1;
+        }
+
+        function splitLetter(word, i) {
+            const letterClass = "letter" + (i !== 0 ? " behind" : "");
+            const content = word.innerHTML.split("");
+            word.innerHTML = "";
+
+            const letters = []
+
+            content.map( (letter) => {
+                // create and add a span for every letter
+                const span = document.createElement('span');
+                span.className = letterClass;
+                span.innerHTML = letter;
+                word.appendChild(span);
+                letters.push(span);
+            });
+
+            wordArray.push(letters);
+        }
+
+        function animateLetterOut(letter, i) {
+            setTimeout(function(){
+                letter.className = 'letter out';
+            }, i*80);
+        }
+
+        function animateLetterIn(letter, i) {
+            letter.className = 'letter behind';
+            setTimeout(function(){
+                letter.className = 'letter in'
+            }, 400 + (i*100))
+        }
+
+        setInterval(changeWord, 4000);
+    </script>
+</body>
+</html>
