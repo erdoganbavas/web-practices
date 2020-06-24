@@ -1,0 +1,13 @@
+.magnify {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+}
+
+.glass {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    border-radius: 100%;
+    border: 5px solid rgba(85, 85, 85, .4);
+}
