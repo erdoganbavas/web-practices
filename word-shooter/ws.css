@@ -1,0 +1,32 @@
+body{
+    overflow: hidden;
+}
+.word {
+    color: green;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    font-size: 32px;
+}
+.word.target {
+    color: red;
+    font-size: 40px;
+}
+.hero {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    margin: -20px 0 0 -20px;
+    border-radius: 100%;
+}
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: tomato;
+    font-size: 40px;
+    font-weight: bold;
+}
