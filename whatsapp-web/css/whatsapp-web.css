@@ -1,0 +1,38 @@
+body {background-color: #d6dbd9; position: relative;}
+body::before {content: ""; background-color: #009688; height: 163px; width: 100%; position: absolute; z-index: -1; top: 0}
+
+.side {max-width: 500px; width: 40%;}
+.side header {height: 60px; background-color: #ededed;}
+.side header .profile-photo {height: 40px; width: 40px; background-color: #dddddd;}
+.side header a {width: 50px; text-align: center;}
+.side header a i {font-size: 24px; line-height: 60px;}
+
+.side .search-bar {background-color: #f7f7f7; height: 55px;}
+.side .search-bar .search-button-wrapper {z-index: 9;}
+
+.side .contacts .profile-photo {height: 50px; width: 50px; background-color: #dddddd;}
+.side .contacts .last-message {font-size: 12px}
+.side .contacts i {color: #dddddd; font-size: 12px;}
+.side .contacts i.read {color: #4fc3f7;}
+
+.chat header {height: 60px; background-color: #ededed;}
+.chat header .profile-photo {height: 40px; width: 40px; background-color: #dddddd;}
+.chat header a {width: 50px; text-align: center;}
+.chat header a i {font-size: 24px; line-height: 60px;}
+
+.chat .dialog {background: url(/img/bg.png) repeat; display: flex; flex-direction: column-reverse; padding: 50px;}
+.chat .dialog .message {display: inline-block; margin: 2px 0; border-radius: 5px; padding: 7px 50px 7px 10px; position: relative;}
+.chat .dialog .message::after {content: attr(data-time); position: absolute; bottom: 2px; right: 6px; font-size: 11px;}
+.chat .dialog .me {background-color: #dcf8c6; margin-left: auto;}
+.chat .dialog .them {background-color: #ffffff; margin-right: auto;}
+
+.chat .dialog .them.tail::before,
+.chat .dialog .me.tail::before {content: ""; background-color: transparent; width: 0; height: 0; border: 10px solid transparent; position: absolute; top: 0; display: block;}
+
+.chat .dialog .them.tail::before {border-top-color: #ffffff; left: -10px;}
+.chat .dialog .me.tail::before {border-top-color: #dcf8c6; right: -10px;}
+
+.chat footer {height: 60px; background-color: #ededed;}
+.chat footer .icon {font-size: 24px;}
+
+
