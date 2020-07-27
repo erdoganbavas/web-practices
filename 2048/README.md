@@ -7,4 +7,4 @@ Game is over when you fill all 16 squares and have no move to make.
 This is a great example for beginner web developers to work on.
 
 Speed code video: 
-https://youtu.be/hCj8h8aOmZE
+https://youtu.be/OtYIcmr7PHs
