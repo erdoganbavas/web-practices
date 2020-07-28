@@ -13,3 +13,5 @@ Next steps;
 
 Speed code video: 
 https://youtu.be/Vj8RGyqqs-Q
+
+Medium post for this repo: https://medium.com/@erdoganbavas/another-basic-javascript-game-card-flipping-memory-game-c77df41892dc
