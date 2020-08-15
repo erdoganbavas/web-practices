@@ -1,0 +1,28 @@
+.sudoku {
+    width: 93vmin;
+    height: 93vmin;
+}
+
+.number {
+    width: 9vmin;
+    height: 9vmin;
+    line-height: 9vmin;
+    font-size: 6vmin;
+    margin: 0 1px 1px 0;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    background-color: #dfdfdf;
+}
+
+.number:nth-child(3n) {
+    margin-right: 1vmin;
+}
+
+.number:nth-child(27n) {
+    margin-bottom: 1vmin;
+}
+
+.number.changed {
+    background-color: #dd0000;
+}
