@@ -1,0 +1,54 @@
+#snake .grid {
+    display: grid;
+    column-gap: 1vmin;
+    row-gap: 1vmin;
+    background-color: beige;
+    width: 80vmin;
+    height: 80vmin;
+    margin: 0 auto;
+}
+
+#snake .grid .cell {
+    background-color: brown;
+    position: relative;
+}
+
+#snake .grid .cell.isBody {
+    background-color: green;
+}
+
+#snake .grid .cell.isHead {
+    background-color: green;
+    border-radius: 40% 40% 0 0;
+}
+
+#snake .grid .cell.isTail{
+    background-color: green;
+    border-radius: 0 0 40% 40%;
+}
+
+#snake .grid .cell.hasFood::after{
+    content: "";
+    background-color: grey;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;    
+}
+
+.rightDirection {
+    transform: rotateZ(90deg);
+}
+
+.leftDirection {
+    transform: rotateZ(-90deg);
+}
+
+.upDirection {
+    transform: rotateZ(0deg);
+}
+
+.downDirection {
+    transform: rotateZ(180deg);
+}
