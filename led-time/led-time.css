@@ -1,0 +1,214 @@
+:root {
+    --dim: 2vmin; /* dimension of a cell */
+    --led: red;
+    --bg: black;
+}
+
+.led-time {
+    display: block;
+}
+
+.led-time .block {
+    width: calc(var(--dim) * 5);
+    height: calc(var(--dim) * 7);
+    background-color: var(--bg);
+    display: inline-block;
+    line-height: 0;
+    padding: 0 calc(var(--dim)/4);
+}
+
+.led-time .block .cell{
+    display: inline-block;
+    width: var(--dim);
+    height: var(--dim);
+    border-radius: 5px;
+    border: 1px solid var(--bg);
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+.led-time .block.column .cell:nth-child(13),
+.led-time .block.column .cell:nth-child(23) {
+    background-color: var(--led);
+}
+
+.led-time .block.number-0 .cell:nth-child(2),
+.led-time .block.number-0 .cell:nth-child(3),
+.led-time .block.number-0 .cell:nth-child(4),
+.led-time .block.number-0 .cell:nth-child(6),
+.led-time .block.number-0 .cell:nth-child(10),
+.led-time .block.number-0 .cell:nth-child(11),
+.led-time .block.number-0 .cell:nth-child(15),
+.led-time .block.number-0 .cell:nth-child(16),
+.led-time .block.number-0 .cell:nth-child(20),
+.led-time .block.number-0 .cell:nth-child(21),
+.led-time .block.number-0 .cell:nth-child(25),
+.led-time .block.number-0 .cell:nth-child(26),
+.led-time .block.number-0 .cell:nth-child(30),
+.led-time .block.number-0 .cell:nth-child(32),
+.led-time .block.number-0 .cell:nth-child(33),
+.led-time .block.number-0 .cell:nth-child(34) {
+    background-color: var(--led);
+}
+
+.led-time .block.number-1 .cell:nth-child(3),
+.led-time .block.number-1 .cell:nth-child(7),
+.led-time .block.number-1 .cell:nth-child(8),
+.led-time .block.number-1 .cell:nth-child(13),
+.led-time .block.number-1 .cell:nth-child(18),
+.led-time .block.number-1 .cell:nth-child(23),
+.led-time .block.number-1 .cell:nth-child(28),
+.led-time .block.number-1 .cell:nth-child(32),
+.led-time .block.number-1 .cell:nth-child(33),
+.led-time .block.number-1 .cell:nth-child(34) {
+    background-color: var(--led);
+}
+
+.led-time .block.number-2 .cell:nth-child(2),
+.led-time .block.number-2 .cell:nth-child(3),
+.led-time .block.number-2 .cell:nth-child(4),
+.led-time .block.number-2 .cell:nth-child(6),
+.led-time .block.number-2 .cell:nth-child(10),
+.led-time .block.number-2 .cell:nth-child(15),
+.led-time .block.number-2 .cell:nth-child(17),
+.led-time .block.number-2 .cell:nth-child(18),
+.led-time .block.number-2 .cell:nth-child(19),
+.led-time .block.number-2 .cell:nth-child(21),
+.led-time .block.number-2 .cell:nth-child(26),
+.led-time .block.number-2 .cell:nth-child(30),
+.led-time .block.number-2 .cell:nth-child(31),
+.led-time .block.number-2 .cell:nth-child(32),
+.led-time .block.number-2 .cell:nth-child(33),
+.led-time .block.number-2 .cell:nth-child(34),
+.led-time .block.number-2 .cell:nth-child(35){
+    background-color: var(--led);
+}
+
+.led-time .block.number-3 .cell:nth-child(2),
+.led-time .block.number-3 .cell:nth-child(3),
+.led-time .block.number-3 .cell:nth-child(4),
+.led-time .block.number-3 .cell:nth-child(6),
+.led-time .block.number-3 .cell:nth-child(10),
+.led-time .block.number-3 .cell:nth-child(15),
+.led-time .block.number-3 .cell:nth-child(17),
+.led-time .block.number-3 .cell:nth-child(18),
+.led-time .block.number-3 .cell:nth-child(19),
+.led-time .block.number-3 .cell:nth-child(25),
+.led-time .block.number-3 .cell:nth-child(26),
+.led-time .block.number-3 .cell:nth-child(30),
+.led-time .block.number-3 .cell:nth-child(32),
+.led-time .block.number-3 .cell:nth-child(33),
+.led-time .block.number-3 .cell:nth-child(34) {
+    background-color: var(--led);
+}
+
+
+.led-time .block.number-4 .cell:nth-child(4),
+.led-time .block.number-4 .cell:nth-child(8),
+.led-time .block.number-4 .cell:nth-child(9),
+.led-time .block.number-4 .cell:nth-child(12),
+.led-time .block.number-4 .cell:nth-child(14),
+.led-time .block.number-4 .cell:nth-child(16),
+.led-time .block.number-4 .cell:nth-child(19),
+.led-time .block.number-4 .cell:nth-child(21),
+.led-time .block.number-4 .cell:nth-child(22),
+.led-time .block.number-4 .cell:nth-child(23),
+.led-time .block.number-4 .cell:nth-child(24),
+.led-time .block.number-4 .cell:nth-child(25),
+.led-time .block.number-4 .cell:nth-child(29),
+.led-time .block.number-4 .cell:nth-child(34) {
+    background-color: var(--led);
+}
+
+
+.led-time .block.number-5 .cell:nth-child(1),
+.led-time .block.number-5 .cell:nth-child(2),
+.led-time .block.number-5 .cell:nth-child(3),
+.led-time .block.number-5 .cell:nth-child(4),
+.led-time .block.number-5 .cell:nth-child(5),
+.led-time .block.number-5 .cell:nth-child(6),
+.led-time .block.number-5 .cell:nth-child(11),
+.led-time .block.number-5 .cell:nth-child(16),
+.led-time .block.number-5 .cell:nth-child(17),
+.led-time .block.number-5 .cell:nth-child(18),
+.led-time .block.number-5 .cell:nth-child(19),
+.led-time .block.number-5 .cell:nth-child(25),
+.led-time .block.number-5 .cell:nth-child(26),
+.led-time .block.number-5 .cell:nth-child(30),
+.led-time .block.number-5 .cell:nth-child(32),
+.led-time .block.number-5 .cell:nth-child(33),
+.led-time .block.number-5 .cell:nth-child(34) {
+    background-color: var(--led);
+}
+
+
+.led-time .block.number-6 .cell:nth-child(3),
+.led-time .block.number-6 .cell:nth-child(4),
+.led-time .block.number-6 .cell:nth-child(7),
+.led-time .block.number-6 .cell:nth-child(11),
+.led-time .block.number-6 .cell:nth-child(16),
+.led-time .block.number-6 .cell:nth-child(17),
+.led-time .block.number-6 .cell:nth-child(18),
+.led-time .block.number-6 .cell:nth-child(19),
+.led-time .block.number-6 .cell:nth-child(21),
+.led-time .block.number-6 .cell:nth-child(25),
+.led-time .block.number-6 .cell:nth-child(26),
+.led-time .block.number-6 .cell:nth-child(30),
+.led-time .block.number-6 .cell:nth-child(32),
+.led-time .block.number-6 .cell:nth-child(33),
+.led-time .block.number-6 .cell:nth-child(34) {
+    background-color: var(--led);
+} 
+
+.led-time .block.number-7 .cell:nth-child(1),
+.led-time .block.number-7 .cell:nth-child(2),
+.led-time .block.number-7 .cell:nth-child(3),
+.led-time .block.number-7 .cell:nth-child(4),
+.led-time .block.number-7 .cell:nth-child(5),
+.led-time .block.number-7 .cell:nth-child(10),
+.led-time .block.number-7 .cell:nth-child(14),
+.led-time .block.number-7 .cell:nth-child(18),
+.led-time .block.number-7 .cell:nth-child(23),
+.led-time .block.number-7 .cell:nth-child(28),
+.led-time .block.number-7 .cell:nth-child(33){
+    background-color: var(--led);
+} 
+
+
+.led-time .block.number-8 .cell:nth-child(2),
+.led-time .block.number-8 .cell:nth-child(3),
+.led-time .block.number-8 .cell:nth-child(4),
+.led-time .block.number-8 .cell:nth-child(6),
+.led-time .block.number-8 .cell:nth-child(10),
+.led-time .block.number-8 .cell:nth-child(11),
+.led-time .block.number-8 .cell:nth-child(15),
+.led-time .block.number-8 .cell:nth-child(17),
+.led-time .block.number-8 .cell:nth-child(18),
+.led-time .block.number-8 .cell:nth-child(19),
+.led-time .block.number-8 .cell:nth-child(21),
+.led-time .block.number-8 .cell:nth-child(25),
+.led-time .block.number-8 .cell:nth-child(26),
+.led-time .block.number-8 .cell:nth-child(30),
+.led-time .block.number-8 .cell:nth-child(32),
+.led-time .block.number-8 .cell:nth-child(33),
+.led-time .block.number-8 .cell:nth-child(34) {
+    background-color: var(--led);
+} 
+
+.led-time .block.number-9 .cell:nth-child(2),
+.led-time .block.number-9 .cell:nth-child(3),
+.led-time .block.number-9 .cell:nth-child(4),
+.led-time .block.number-9 .cell:nth-child(6),
+.led-time .block.number-9 .cell:nth-child(10),
+.led-time .block.number-9 .cell:nth-child(11),
+.led-time .block.number-9 .cell:nth-child(15),
+.led-time .block.number-9 .cell:nth-child(17),
+.led-time .block.number-9 .cell:nth-child(18),
+.led-time .block.number-9 .cell:nth-child(19),
+.led-time .block.number-9 .cell:nth-child(20),
+.led-time .block.number-9 .cell:nth-child(25),
+.led-time .block.number-9 .cell:nth-child(29),
+.led-time .block.number-9 .cell:nth-child(32),
+.led-time .block.number-9 .cell:nth-child(33) {
+    background-color: var(--led);
+} 
